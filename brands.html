@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands - Beauty Luxe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bgbrand.jpg') center/cover fixed no-repeat;
+            background-size: cover;
+    background-attachment: fixed;
+    background-color: #fff5f8; 
+    color: #333;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .logo img {
+            width: 70px !important;
+    height: auto !important; 
+    max-width: unset !important;
+    display: block;
+}
+        .logo-text {
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'Merriweather', serif;
+        }
+        nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 18px; 
+    letter-spacing: 2px; 
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: darkmagenta; 
+    transform: scale(1.1); 
+}
+
+        .brands-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 20px 0;
+        overflow: hidden;
+    }
+
+    .fancy-title {
+        font-size: 45px;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+        background: linear-gradient(45deg, #ff69b4, darkmagenta, purple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 5px rgba(255, 20, 147, 0.5);
+    }
+
+        .brand-category {
+            margin: 40px auto;
+            width: 90%;
+        }
+
+        .category-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #ff69b4, darkmagenta);
+            color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            letter-spacing: 1px;
+        }
+
+        .brands-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .brand-card {
+            width: 180px; 
+            height: 100px; 
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .brand-card:hover {
+            transform: scale(1.05);
+        }
+
+        .brand-card img {
+            max-width: 100%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logochange.png" alt="Beauty Luxe">
+        <span class="logo-text">Beauty Luxe</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="new.html">SignUp</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1 class="brands-title">
+    <marquee behavior="scroll" direction="left" scrollamount="25">
+        <span class="fancy-title">✨ All New Popular Brands ✨</span>
+    </marquee>
+</h1>
+
+
+<div class="brand-category">
+    <h2 class="category-title">Makeup</h2>
+    <div class="brands-container">
+        <div class="brand-card" onclick="showProducts('MAC')">
+            <img src="MAC-Logo.png" alt="MAC">
+        </div>  
+        <div class="brand-card" onclick="showProducts('Maybelline')">
+            <img src="Maybelline-logo.png" alt="Maybelline">
+        </div>
+        <div class="brand-card" onclick="showProducts('NARS')">
+            <img src="NARS_Cosmetics_logo.png" alt="NARS">
+        </div>
+        <div class="brand-card" onclick="showProducts('Huda Beauty')">
+            <img src="hudabeautylogo.png" alt="Huda Beauty">
+        </div>
+        <div class="brand-card" onclick="showProducts('Lakme')">
+            <img src="lakme.png" alt="Lakme">
+        </div>
+        <div class="brand-card" onclick="showProducts('Sugar')">
+            <img src="sugar.png" alt="Sugar">
+        </div>
+        <div class="brand-card" onclick="showProducts('Loreal')">
+            <img src="LOreal-Symbol.jpg" alt="Loreal">
+        </div>
+    </div>
+</div>
+
+
+<div class="brand-category">
+    <h2 class="category-title">Skincare</h2>
+    <div class="brands-container">
+        <div class="brand-card" onclick="showProducts('The Ordinary')">
+            <img src="the-ordinary-logo-vector.png" alt="The Ordinary">
+        </div>
+        <div class="brand-card" onclick="showProducts('CeraVe')">
+            <img src="CeraVeLogo.webp" alt="CeraVe">
+        </div>
+        <div class="brand-card" onclick="showProducts('La Roche-Posay')">
+            <img src="larocheposaylogo.png" alt="La Roche-Posay">
+        </div>
+        <div class="brand-card" onclick="showProducts('Himalaya')">
+            <img src="himalya.avif" alt="Himalaya">
+        </div>
+        <div class="brand-card" onclick="showProducts('Mamaearth')">
+            <img src="mamaearth.png" alt="Mamaearth">
+        </div>
+        <div class="brand-card" onclick="showProducts('Nivea')">
+            <img src="nivea.png" alt="Nivea">
+        </div>
+    </div>
+</div>
+
+
+<div class="brand-category">
+    <h2 class="category-title">Haircare</h2>
+    <div class="brands-container">
+        <div class="brand-card" onclick="showProducts('Olaplex')">
+            <img src="olaplex.png" alt="Olaplex">
+        </div>
+        <div class="brand-card" onclick="showProducts('Dyson')">
+            <img src="dyson.png" alt="Dyson">
+        </div>
+        <div class="brand-card" onclick="showProducts('Bodywise')">
+            <img src="bodywise_logo.png" alt="Bodywise">
+        </div>
+        <div class="brand-card" onclick="showProducts('Wishcare')">
+            <img src="WishCare.webp" alt="Wishcare">
+        </div>
+        <div class="brand-card" onclick="showProducts('Kerastase')">
+            <img src="kerastaselogo.png" alt="Kerastase">
+        </div>
+    </div>
+</div>
+
+
+<div class="brand-category">
+    <h2 class="category-title">Fragrances</h2>
+    <div class="brands-container">
+        <div class="brand-card" onclick="showProducts('Chanel')">
+            <img src="chanel.png" alt="Chanel">
+        </div>
+        <div class="brand-card" onclick="showProducts('Dior')">
+            <img src="dior.png" alt="Dior">
+        </div>
+        <div class="brand-card" onclick="showProducts('Gucci')">
+            <img src="Gucci_Logo.svg.png" alt="Gucci">
+        </div>
+        <div class="brand-card" onclick="showProducts('Fogg')">
+            <img src="fogg1.png" alt="Fogg">
+        </div>
+    </div>
+</div>
+
+
+<div class="brand-category">
+    <h2 class="category-title">Nails</h2>
+    <div class="brands-container">
+        <div class="brand-card" onclick="showProducts('OPI')">
+            <img src="OPI_logo.jpg" alt="OPI">
+        </div>
+        <div class="brand-card" onclick="showProducts('Essie')">
+            <img src="essie-logo-vector.png" alt="Essie">
+        </div>
+        <div class="brand-card" onclick="showProducts('Sallyhansen')">
+            <img src="sallyhansen.png" alt="Sallyhansen">
+        </div>
+    </div>
+</div>
+
+<script>
+    function showProducts(brand) {
+        window.location.href = brand.toLowerCase().replace(/\s+/g, '') + ".html";
+    }
+</script>
+
+</body>
+</html>
